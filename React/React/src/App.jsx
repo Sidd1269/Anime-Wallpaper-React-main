@@ -14,6 +14,7 @@ import ChainsawMan from "./Components/Pages/ChainsawMan";
 import SpyXFamily from "./Components/Pages/SpyXFamily";
 import DemonSlayer from "./Components/Pages/DemonSlayer";
 import Bleach from "./Components/Pages/Bleach";
+import MyHeroAce from "./Components/Pages/MyHeroAce";
 
 
 import ScrollToTop from "./Function/ScrollToTop";
@@ -51,6 +52,7 @@ function App() {
       <Route path="/spy-x-family" element={<SpyXFamily />} />
       <Route path="/Demon-Slayer" element={<DemonSlayer />} />
       <Route path="/Bleach" element={<Bleach />} />
+      <Route path="/MyHeroAce" element={<MyHeroAce />} />
 
 
       </Routes>

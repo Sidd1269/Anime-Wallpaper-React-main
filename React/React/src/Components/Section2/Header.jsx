@@ -47,7 +47,7 @@ const Header = () => {
             Bleach
           </li>
 
-          <li className={btn}>
+          <li className={btn} onClick={() => navigate("/MyHeroAce")} >
             MHA
           </li>
 
