@@ -7,7 +7,7 @@ const OnePiece = () => {
   return (
    <div className="w-full min-h-screen bg-gradient-to-b from-gray-400 via-zinc-200 to-slate-300">
       <h1 className="text-4xl font-bold text-center pt-10">Chainsaw Man</h1>
-      <WallpaperList category="OnePiece" />
+      <WallpaperList category="One-Piece" />
        <Footer />
     </div>  
   ) 

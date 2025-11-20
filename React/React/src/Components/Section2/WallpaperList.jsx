@@ -14,19 +14,14 @@ const WallpaperList = ({ category }) => {
       ? wallpapers.filter((w) => normalize(w.category) === normalize(category))
       : wallpapers;
 
-  // Total pages
   const totalPages = Math.ceil(filtered.length / pageSize);
 
-  // Slice images for current page
   const start = (page - 1) * pageSize;
   const paginatedWallpapers = filtered.slice(start, start + pageSize);
 
   // Scroll to top on page change
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [page]);
 
   return (
@@ -48,34 +43,48 @@ const WallpaperList = ({ category }) => {
       {/* PAGINATION */}
       <div className="flex justify-center gap-3 mt-10 items-center">
 
+        {/* FIRST Button */}
+        <button
+          disabled={page === 1}
+          onClick={() => setPage(1)}
+          className={`px-4 py-2 rounded-lg ${
+            page === 1
+              ? "bg-gray-300 text-gray-600"
+              : "bg-black text-white hover:bg-gray-800"
+          }`}
+        >
+          First
+        </button>
+
         {/* Prev Button */}
         <button
           disabled={page === 1}
           onClick={() => setPage(page - 1)}
           className={`px-4 py-2 rounded-lg ${
             page === 1
-              ? "bg-gray-400 text-gray-600"
+              ? "bg-gray-300 text-gray-600"
               : "bg-black text-white hover:bg-gray-800"
           }`}
         >
           Prev
         </button>
 
-        {/* Page Buttons (Dynamic Window of 5) */}
+        {/* Page Buttons Window (max 5) */}
         {(() => {
           const windowSize = 5;
 
           let startPage = Math.max(1, page - Math.floor(windowSize / 2));
           let endPage = startPage + windowSize - 1;
 
+          // keep window inside totalPages
           if (endPage > totalPages) {
             endPage = totalPages;
             startPage = Math.max(1, endPage - windowSize + 1);
           }
 
-          const pageButtons = [];
+          const pages = [];
           for (let p = startPage; p <= endPage; p++) {
-            pageButtons.push(
+            pages.push(
               <button
                 key={p}
                 onClick={() => setPage(p)}
@@ -90,7 +99,7 @@ const WallpaperList = ({ category }) => {
             );
           }
 
-          return pageButtons;
+          return pages;
         })()}
 
         {/* Next Button */}
@@ -99,11 +108,24 @@ const WallpaperList = ({ category }) => {
           onClick={() => setPage(page + 1)}
           className={`px-4 py-2 rounded-lg ${
             page === totalPages
-              ? "bg-gray-400 text-gray-600"
+              ? "bg-gray-300 text-gray-600"
               : "bg-black text-white hover:bg-gray-800"
           }`}
         >
           Next
+        </button>
+
+        {/* LAST Button */}
+        <button
+          disabled={page === totalPages}
+          onClick={() => setPage(totalPages)}
+          className={`px-4 py-2 rounded-lg ${
+            page === totalPages
+              ? "bg-gray-300 text-gray-600"
+              : "bg-black text-white hover:bg-gray-800"
+          }`}
+        >
+          Last
         </button>
 
       </div>
