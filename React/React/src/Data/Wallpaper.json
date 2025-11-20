@@ -1,0 +1,63 @@
+[
+  { "id": 1, "title": "Luffy Gear 5", "desc": "Luffy unleashes Gear 5.", "image": "https://4kwallpapers.com/images/walls/thumbs_3t/18363.jpg", "category": "OnePiece" },
+  { "id": 2, "title": "Goku Ultra Instinct", "desc": "The calm before the storm.", "image": "https://4kwallpapers.com/images/walls/thumbs_3t/20947.jpg", "category": "DragonBall" },
+
+  { "id": 3, "title": "Zoro King of Hell", "desc": "Santoryu awakened.", "image": "https://4kwallpapers.com/images/walls/thumbs_3t/18358.jpg", "category": "OnePiece" },
+  { "id": 4, "title": "Sanji Ifrit Jambe", "desc": "Blue flames dance.", "image": "https://4kwallpapers.com/images/walls/thumbs_3t/16684.jpg", "category": "OnePiece" },
+  { "id": 5, "title": "Nami Zeus Mode", "desc": "Thunder curls around her.", "image": "https://wallpapers-clan.com/wp-content/uploads/2024/10/nami-one-piece-smiling-desktop-wallpaper-preview.jpg", "category": "OnePiece" },
+  { "id": 6, "title": "Ace Fire Fist", "desc": "The flames rise again.", "image": "https://wallpapers-clan.com/wp-content/uploads/2024/05/one-piece-funny-portgas-d-ace-blue-desktop-wallpaper-preview.jpg", "category": "OnePiece" },
+  { "id": 7, "title": "Shanks Arrival", "desc": "A quiet menace fills the air.", "image": "https://fwmedia.fandomwire.com/wp-content/uploads/2024/12/05082527/red-hair-pirates-arrive-at-marineford.png", "category": "OnePiece" },
+ 
+
+  { "id": 8, "title": "Naruto Sage Mode", "desc": "Nature energy flows around him.", "image": "https://images2.alphacoders.com/137/1377508.jpg", "category": "Naruto" },
+  { "id": 9, "title": "Sasuke Eternal Mangekyou", "desc": "Eyes sharpen to destiny.", "image": "https://images6.alphacoders.com/134/thumb-350-1341149.webp", "category": "Naruto" },
+  { "id": 10, "title": "Kakashi Lightning Blade", "desc": "Chidori crackles in the dark.", "image": "https://motionbgs.com/media/5096/kakashi-hatake-naruto.jpg", "category": "Naruto" },
+  { "id": 11, "title": "Itachi Susanoo", "desc": "A crimson guardian rises.", "image": "https://wallpapercave.com/wp/wp12394365.jpg", "category": "Naruto" },
+  { "id": 12, "title": "Madara Rinnegan", "desc": "Power with no horizon.", "image": "https://images4.alphacoders.com/135/thumb-1920-1357584.png", "category": "Naruto" },
+
+  { "id": 13, "title": "Goku Super Saiyan Blue", "desc": "Limit-breaking aura.", "image": "https://wallpapercave.com/wp/wp2058003.jpg", "category": "DragonBall" },
+  { "id": 14, "title": "Vegeta God of Destruction Mode", "desc": "Ultra Ego awakens.", "image": "https://wallpaperaccess.com/full/120429.jpg", "category": "DragonBall" },
+  { "id": 15, "title": "Trunks Rage Form", "desc": "Lightning splits the future.", "image": "https://wallpaperaccess.com/full/5573368.jpg", "category": "DragonBall" },
+  { "id": 16, "title": "Broly Berserk", "desc": "A storm without end.", "image": "https://wallpapercave.com/wp/wp6012478.jpg", "category": "DragonBall" },
+  { "id": 17, "title": "Gohan Beast", "desc": "Potential finally breaks free.", "image": "https://wallpaperaccess.com/full/393752.jpg", "category": "DragonBall" },
+
+  { "id": 18, "title": "Tanjiro Sun Breathing", "desc": "Gentle fire dances in rhythm.", "image": "https://4kwallpapers.com/images/walls/thumbs_3t/24474.jpg", "category": "DemonSlayer" },
+  { "id": 19, "title": "Nezuko Awakened", "desc": "Vines bloom with power.", "image": "https://4kwallpapers.com/images/walls/thumbs_3t/9322.jpg", "category": "DemonSlayer" },
+  { "id": 20, "title": "Zenitsu Thunderclap", "desc": "Stillness before the strike.", "image": "https://4kwallpapers.com/images/walls/thumbs_3t/24356.jpg", "category": "DemonSlayer" },
+  { "id": 21, "title": "Inosuke Beast Form", "desc": "Raw spirit of the wild.", "image": "https://4kwallpapers.com/images/walls/thumbs_3t/23428.jpg", "category": "DemonSlayer" },
+  { "id": 22, "title": "Rengoku Flame Pillar", "desc": "Warmth that never fades.", "image": "https://4kwallpapers.com/images/walls/thumbs_3t/17629.jpg", "category": "DemonSlayer" },
+
+  { "id": 23, "title": "Eren Founding Titan", "desc": "Wings of fury, chains of fate.", "image": "https://wallpaperaccess.com/full/8912502.jpg", "category": "AoT" },
+  { "id": 24, "title": "Levi Battle Stance", "desc": "Clean kills only.", "image": "https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/92ae4961-c174-4b14-9bb3-8532ca20e20f/Sunset+Battle+Stance", "category": "AoT" },
+  { "id": 25, "title": "Mikasa Ackerman", "desc": "Unshakeable loyalty.", "image": "https://wallpapers.com/images/hd/mikasa-ackerman-attack-on-titans-4k-dyqf9savadmbl814.jpg", "category": "AoT" },
+  { "id": 26, "title": "Armin Colossal Titan", "desc": "A quiet heart behind destruction.", "image": "https://rare-gallery.com/mocahbig/1375286-colossal-titan-armin-attack-on-titan-anime-shingeki-no-kyojin.jpg", "category": "AoT" },
+  { "id": 27, "title": "Reiner Armored Titan", "desc": "A warrior's burden.", "image": "https://wallpaperaccess.com/full/4933532.jpg", "category": "AoT" },
+
+  { "id": 28, "title": "Gojo Infinite Void", "desc": "Infinity stretches like silk.", "image": "https://wallpaperaccess.com/full/10881687.jpg", "category": "JJK" },
+  { "id": 29, "title": "Yuji Black Flash", "desc": "Space cracks for a moment.", "image": "https://i.pinimg.com/originals/0c/e8/0a/0ce80a88a471f23f9370c31832004973.jpg", "category": "JJK" },
+  { "id": 30, "title": "Megumi Chimera Shadow", "desc": "Shikigami gather in silence.", "image": "https://moewalls.com/wp-content/uploads/2022/08/megumi-fushiguro-domain-expansion-chimera-shadow-garden-thumb.jpg", "category": "JJK" },
+  { "id": 31, "title": "Sukuna True Form", "desc": "A demon breathes again.", "image": "https://wallpapercave.com/wp/wp14164572.jpg", "category": "JJK" },
+  { "id": 32, "title": "Nobara Resonance", "desc": "A curse shatters in protest.", "image": "https://images.wallpapersden.com/image/download/nobara-kugisaki-hd-jujutsu-kaisen-art_bWppZWWUmZqaraWkpJRnamtlrWZpaWU.jpg", "category": "JJK" },
+  
+  { "id": 33, "title": "Kaneki Masked", "desc": "A fragile soul under steel.", "image": "https://imageurl.com/33", "category": "TokyoGhoul" },
+  { "id": 34, "title": "Kaneki Centipede", "desc": "A tortured evolution.", "image": "https://imageurl.com/34", "category": "TokyoGhoul" },
+  { "id": 35, "title": "Touka Rabbit", "desc": "A streak of quiet fury.", "image": "https://imageurl.com/35", "category": "TokyoGhoul" },
+  { "id": 36, "title": "Arima Kishou", "desc": "A blade without hesitation.", "image": "https://imageurl.com/36", "category": "TokyoGhoul" },
+  { "id": 37, "title": "Suzuya Juzo", "desc": "Chaos wrapped in innocence.", "image": "https://imageurl.com/37", "category": "TokyoGhoul" },
+
+  { "id": 38, "title": "Asta Devil Union", "desc": "Darkness sharpens resolve.", "image": "https://imageurl.com/38", "category": "BlackClover" },
+  { "id": 39, "title": "Yuno Spirit Dive", "desc": "Wind glitters gracefully.", "image": "https://imageurl.com/39", "category": "BlackClover" },
+  { "id": 40, "title": "Noelle Valkyrie Dress", "desc": "Water becomes armor.", "image": "https://imageurl.com/40", "category": "BlackClover" },
+  { "id": 41, "title": "Yami Dark Dimension", "desc": "Gravity folds around him.", "image": "https://imageurl.com/41", "category": "BlackClover" },
+  { "id": 42, "title": "Luck Battle Frenzy", "desc": "Electric joy erupts.", "image": "https://imageurl.com/42", "category": "BlackClover" },
+
+  { "id": 43, "title": "Mob 100 Percent", "desc": "A storm inside a quiet boy.", "image": "https://imageurl.com/43", "category": "MobPsycho" },
+  { "id": 44, "title": "Reigen Sparkling", "desc": "Confidence shimmering absurdly.", "image": "https://imageurl.com/44", "category": "MobPsycho" },
+  { "id": 45, "title": "Dimple Evolved", "desc": "Green aura thickens.", "image": "https://imageurl.com/45", "category": "MobPsycho" },
+
+  { "id": 46, "title": "Ichigo Bankai", "desc": "Black and red cut time.", "image": "https://imageurl.com/46", "category": "Bleach" },
+  { "id": 47, "title": "Ichigo Hollow Mask", "desc": "Instinct claws through.", "image": "https://imageurl.com/47", "category": "Bleach" },
+  { "id": 48, "title": "Aizen Final Fusion", "desc": "Calm omnipotence whispers.", "image": "https://imageurl.com/48", "category": "Bleach" },
+  { "id": 49, "title": "Rukia Ice Form", "desc": "Stillness colder than death.", "image": "https://imageurl.com/49", "category": "Bleach" },
+  { "id": 50, "title": "Kenpachi Unleashed", "desc": "A grin before destruction.", "image": "https://imageurl.com/50", "category": "Bleach" }
+]
