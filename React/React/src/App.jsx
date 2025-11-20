@@ -11,10 +11,11 @@ import OnePiece from "./Components/Pages/OnePiece";
 import DragonBall from "./Components/Pages/DragonBall";
 import MonkeyDragon from "./Components/Pages/MonkeyDragon";
 import ChainsawMan from "./Components/Pages/ChainsawMan";
-import SpyXFamily from "./Components/Pages/SpyXFamily";
+import SpyXFamily from "./Components/Pages/JujutsuKaisen";
 import DemonSlayer from "./Components/Pages/DemonSlayer";
 import Bleach from "./Components/Pages/Bleach";
 import MyHeroAce from "./Components/Pages/MyHeroAce";
+import TokyoGhoul from "./Components/Pages/TokyoGhoul";
 
 
 import ScrollToTop from "./Function/ScrollToTop";
@@ -53,6 +54,7 @@ function App() {
       <Route path="/Demon-Slayer" element={<DemonSlayer />} />
       <Route path="/Bleach" element={<Bleach />} />
       <Route path="/MyHeroAce" element={<MyHeroAce />} />
+      <Route path="/TokyoGhoul" element={<TokyoGhoul />} />
 
 
       </Routes>

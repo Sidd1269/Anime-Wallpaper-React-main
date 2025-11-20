@@ -58,8 +58,8 @@ const Header = () => {
       <div className="flex items-center justify-center mt-7">
         <ul className="flex gap-4">
 
-          <li className={btn} onClick={() => navigate("/monkey-dragon")}>
-            Your Name
+          <li className={btn} onClick={() => navigate("/TokyoGhoul")}>
+            Tokyo Ghoul
           </li>
 
           <li className={btn} onClick={() => navigate("/chainsaw-man")}>

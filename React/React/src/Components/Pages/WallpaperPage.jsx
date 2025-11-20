@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import wallpapers from "../../Data/Wallpaper.json";
 
 const WallpaperPage = () => {
+  
+
   const { id } = useParams();
   const item = wallpapers.find(w => w.id == id);
 
