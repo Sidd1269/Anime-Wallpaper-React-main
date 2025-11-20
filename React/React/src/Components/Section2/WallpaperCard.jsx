@@ -14,8 +14,13 @@ const WallpaperCard = ({ id, title, desc, image }) => {
         className="h-48 w-full object-cover rounded-lg transform transition duration-300 hover:scale-105 hover:-translate-y-1"
       />
 
-      <h3 className="text-xl font-semibold mt-3">{title}</h3>
-      <p className="text-gray-600 text-sm mt-1">{desc}</p>
+     <h3 className="text-xl font-semibold mt-3 truncate w-full">
+  {title}
+    </h3>
+    <p className="text-gray-600 text-sm mt-1 line-clamp-2">
+  {desc}
+    </p>
+
 
       <button 
         onClick={(e) => {

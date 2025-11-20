@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import wallpapers from "../../Data/Wallpaper.json";
 import WallpaperCard from "./WallpaperCard";
 
@@ -14,15 +14,25 @@ const WallpaperList = ({ category }) => {
       ? wallpapers.filter((w) => normalize(w.category) === normalize(category))
       : wallpapers;
 
-  // Pagination logic
+  // Total pages
   const totalPages = Math.ceil(filtered.length / pageSize);
+
+  // Slice images for current page
   const start = (page - 1) * pageSize;
   const paginatedWallpapers = filtered.slice(start, start + pageSize);
+
+  // Scroll to top on page change
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [page]);
 
   return (
     <div className="w-full">
 
-      {/* Wallpaper Grid */}
+      {/* Wallpaper GRID */}
       <div className="w-full flex flex-wrap gap-6 justify-center mt-10">
         {paginatedWallpapers.map((item) => (
           <WallpaperCard
@@ -35,42 +45,63 @@ const WallpaperList = ({ category }) => {
         ))}
       </div>
 
-      {/* Pagination */}
-      <div className="flex justify-center gap-3 mt-10">
+      {/* PAGINATION */}
+      <div className="flex justify-center gap-3 mt-10 items-center">
 
         {/* Prev Button */}
         <button
           disabled={page === 1}
-          onClick={() => setPage((p) => p - 1)}
-          className={`px-4 py-2 rounded-lg 
-          ${page === 1 ? "bg-gray-400 text-gray-700" : "bg-black text-white hover:bg-gray-800"}
-        `}
+          onClick={() => setPage(page - 1)}
+          className={`px-4 py-2 rounded-lg ${
+            page === 1
+              ? "bg-gray-400 text-gray-600"
+              : "bg-black text-white hover:bg-gray-800"
+          }`}
         >
           Prev
         </button>
 
-        {/* Page Numbers */}
-        {[...Array(totalPages)].map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setPage(i + 1)}
-            className={`px-3 py-2 rounded-lg ${
-              page === i + 1
-                ? "bg-red-600 text-white"
-                : "bg-gray-300 text-black hover:bg-gray-400"
-            }`}
-          >
-            {i + 1}
-          </button>
-        ))}
+        {/* Page Buttons (Dynamic Window of 5) */}
+        {(() => {
+          const windowSize = 5;
+
+          let startPage = Math.max(1, page - Math.floor(windowSize / 2));
+          let endPage = startPage + windowSize - 1;
+
+          if (endPage > totalPages) {
+            endPage = totalPages;
+            startPage = Math.max(1, endPage - windowSize + 1);
+          }
+
+          const pageButtons = [];
+          for (let p = startPage; p <= endPage; p++) {
+            pageButtons.push(
+              <button
+                key={p}
+                onClick={() => setPage(p)}
+                className={`px-3 py-2 rounded-lg ${
+                  page === p
+                    ? "bg-red-600 text-white"
+                    : "bg-gray-300 text-black hover:bg-gray-400"
+                }`}
+              >
+                {p}
+              </button>
+            );
+          }
+
+          return pageButtons;
+        })()}
 
         {/* Next Button */}
         <button
           disabled={page === totalPages}
-          onClick={() => setPage((p) => p + 1)}
-          className={`px-4 py-2 rounded-lg 
-          ${page === totalPages ? "bg-gray-400 text-gray-700" : "bg-black text-white hover:bg-gray-800"}
-        `}
+          onClick={() => setPage(page + 1)}
+          className={`px-4 py-2 rounded-lg ${
+            page === totalPages
+              ? "bg-gray-400 text-gray-600"
+              : "bg-black text-white hover:bg-gray-800"
+          }`}
         >
           Next
         </button>
