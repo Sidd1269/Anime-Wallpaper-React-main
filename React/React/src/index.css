@@ -1,1 +1,125 @@
-@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Chakra+Petch:wght@500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-night: #030712;
+  --bg-night-secondary: #070b16;
+  --grid-color: rgba(120, 146, 255, 0.08);
+  --accent-primary: #f472b6;
+  --accent-secondary: #818cf8;
+  --accent-tertiary: #22d3ee;
+  font-family: "Space Grotesk", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Dark theme variables */
+:root.dark,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  color: #f8fafc;
+  background-color: var(--bg-night);
+}
+
+/* Light theme variables */
+:root.light,
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg-light: #cbd5e1;
+  --bg-light-secondary: #94a3b8;
+  --bg-light-tertiary: #64748b;
+  --grid-color-light: rgba(100, 116, 139, 0.15);
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: inherit;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark theme */
+body.dark-theme {
+  background-color: var(--bg-night);
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(79, 70, 229, 0.25), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(236, 72, 153, 0.15), transparent 45%),
+    linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.98)),
+    var(--bg-night);
+  color: #e2e8f0;
+}
+
+body.dark-theme::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: var(--grid-color);
+  background-image: radial-gradient(circle at 1px 1px, var(--grid-color) 1px, transparent 0);
+  background-size: 60px 60px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* Light theme */
+body.light-theme {
+  background-color: var(--bg-light);
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(100, 116, 139, 0.15), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(148, 163, 184, 0.12), transparent 45%),
+    linear-gradient(135deg, rgba(203, 213, 225, 0.95), rgba(148, 163, 184, 0.98)),
+    var(--bg-light);
+  color: var(--text-dark);
+}
+
+body.light-theme::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: var(--grid-color-light);
+  background-image: radial-gradient(circle at 1px 1px, var(--grid-color-light) 1px, transparent 0);
+  background-size: 60px 60px;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.glow-outline {
+  box-shadow:
+    0 0 25px rgba(129, 140, 248, 0.35),
+    inset 0 0 12px rgba(236, 72, 153, 0.4);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+body.light-theme ::-webkit-scrollbar-track {
+  background: rgba(148, 163, 184, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent-secondary), var(--accent-primary));
+  border-radius: 999px;
+}
+
+body.light-theme ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #64748b, #475569);
+}

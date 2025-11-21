@@ -28,10 +28,10 @@ const WallpaperList = ({ category }) => {
   }, [page]);
 
   return (
-    <div className="w-full" ref={wallpaperGridRef}>
+    <div className="w-full px-4 sm:px-8" ref={wallpaperGridRef}>
 
       {/* Wallpaper GRID */}
-      <div className="w-full flex flex-wrap gap-6 justify-center mt-10">
+      <div className="mx-auto mt-10 flex max-w-6xl flex-wrap justify-center gap-6">
         {paginatedWallpapers.map((item) => (
           <WallpaperCard
             key={item.id}
@@ -44,16 +44,16 @@ const WallpaperList = ({ category }) => {
       </div>
 
       {/* PAGINATION */}
-      <div className="flex justify-center gap-3 mt-10 items-center">
+      <div className="mt-10 flex flex-wrap items-center justify-center gap-3 text-gray-900 dark:text-white">
 
         {/* FIRST Button */}
         <button
           disabled={page === 1}
           onClick={() => setPage(1)}
-          className={`px-4 py-2 rounded-lg ${
+          className={`rounded-2xl px-4 py-2 text-sm font-semibold uppercase tracking-[0.3em] ${
             page === 1
-              ? "bg-gray-300 text-gray-600"
-              : "bg-black text-white hover:bg-gray-800"
+              ? "border border-gray-300/50 dark:border-white/10 bg-gray-200/50 dark:bg-white/5 text-gray-400 dark:text-white/40"
+              : "border border-gray-400/50 dark:border-white/20 bg-gray-100/50 dark:bg-white/10 text-gray-800 dark:text-white transition hover:border-gray-500/60 dark:hover:border-neon-cyan/60"
           }`}
         >
           First
@@ -63,10 +63,10 @@ const WallpaperList = ({ category }) => {
         <button
           disabled={page === 1}
           onClick={() => setPage(page - 1)}
-          className={`px-4 py-2 rounded-lg ${
+          className={`rounded-2xl px-4 py-2 text-sm font-semibold uppercase tracking-[0.3em] ${
             page === 1
-              ? "bg-gray-300 text-gray-600"
-              : "bg-black text-white hover:bg-gray-800"
+              ? "border border-gray-300/50 dark:border-white/10 bg-gray-200/50 dark:bg-white/5 text-gray-400 dark:text-white/40"
+              : "border border-gray-400/50 dark:border-white/20 bg-gray-100/50 dark:bg-white/10 text-gray-800 dark:text-white transition hover:border-gray-500/60 dark:hover:border-neon-cyan/60"
           }`}
         >
           Prev
@@ -91,10 +91,10 @@ const WallpaperList = ({ category }) => {
               <button
                 key={p}
                 onClick={() => setPage(p)}
-                className={`px-3 py-2 rounded-lg ${
+                className={`rounded-2xl px-3 py-2 text-sm font-semibold ${
                   page === p
-                    ? "bg-red-600 text-white"
-                    : "bg-gray-300 text-black hover:bg-gray-400"
+                    ? "border border-neon-pink/70 bg-neon-pink/30 text-white shadow-glow"
+                    : "border border-gray-300/50 dark:border-white/10 bg-gray-100/50 dark:bg-white/5 text-gray-700 dark:text-white/70 hover:border-gray-400/60 dark:hover:border-neon-cyan/60"
                 }`}
               >
                 {p}
@@ -109,10 +109,10 @@ const WallpaperList = ({ category }) => {
         <button
           disabled={page === totalPages}
           onClick={() => setPage(page + 1)}
-          className={`px-4 py-2 rounded-lg ${
+          className={`rounded-2xl px-4 py-2 text-sm font-semibold uppercase tracking-[0.3em] ${
             page === totalPages
-              ? "bg-gray-300 text-gray-600"
-              : "bg-black text-white hover:bg-gray-800"
+              ? "border border-gray-300/50 dark:border-white/10 bg-gray-200/50 dark:bg-white/5 text-gray-400 dark:text-white/40"
+              : "border border-gray-400/50 dark:border-white/20 bg-gray-100/50 dark:bg-white/10 text-gray-800 dark:text-white transition hover:border-gray-500/60 dark:hover:border-neon-cyan/60"
           }`}
         >
           Next
@@ -122,10 +122,10 @@ const WallpaperList = ({ category }) => {
         <button
           disabled={page === totalPages}
           onClick={() => setPage(totalPages)}
-          className={`px-4 py-2 rounded-lg ${
+          className={`rounded-2xl px-4 py-2 text-sm font-semibold uppercase tracking-[0.3em] ${
             page === totalPages
-              ? "bg-gray-300 text-gray-600"
-              : "bg-black text-white hover:bg-gray-800"
+              ? "border border-gray-300/50 dark:border-white/10 bg-gray-200/50 dark:bg-white/5 text-gray-400 dark:text-white/40"
+              : "border border-gray-400/50 dark:border-white/20 bg-gray-100/50 dark:bg-white/10 text-gray-800 dark:text-white transition hover:border-gray-500/60 dark:hover:border-neon-cyan/60"
           }`}
         >
           Last

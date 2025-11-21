@@ -1,49 +1,36 @@
-import React from 'react';
+import React from "react";
 
 const ImageCard = () => {
   return (
-<div className="mx-20 mt-3 mb-10 relative rounded-3xl overflow-hidden bg-gray-400 shadow-md">
+    <div className="relative mx-auto mt-4 max-w-5xl overflow-hidden rounded-[36px] border border-gray-300/50 dark:border-white/10 bg-gradient-to-r from-slate-200/80 via-slate-100/90 to-slate-200/80 dark:from-slate-900/70 dark:via-night-2/80 dark:to-slate-900/70 p-10 shadow-glow">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(148,163,184,0.2),transparent_55%)] dark:bg-[radial-gradient(circle_at_top,_rgba(244,114,182,0.3),transparent_55%)]" aria-hidden />
+      <div className="relative z-10 flex flex-col gap-6">
+        <p className="text-xs uppercase tracking-[0.45em] text-gray-600 dark:text-white/60">Weekly spotlight</p>
+        <h1 className="text-3xl font-semibold text-gray-900 dark:text-white sm:text-4xl">
+          Anime wallpaper drops curated for{" "}
+          <span className="bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan bg-clip-text text-transparent">
+            midnight desktops
+          </span>
+          .
+        </h1>
+        <p className="text-base text-gray-700 dark:text-slate-300">
+          Monkey D. Luffy, Chainsaw Man, Tanjiro, Zenitsu, Makima, and Gojo—all color-graded for
+          dark setups with cinematic contrast, perfect for OLED phones, ultrawide monitors, and
+          vertical signage.
+        </p>
 
-  {/* TEXT */}
-  <div className="relative z-20 px-10 pb-8 mt-4">
-    <h1 className="text-4xl font-semibold text-gray-800">
-      Anime Wallpaper ..........
-    </h1>
-
-    <p className="text-gray-700 mt-2">
-      Explore recently added wallpapers of Monkey D. Luffy, Chainsaw Man, Tanjiro Kamado,
-      Zenitsu Agatsuma, Tojima Wants to Be a Kamen Rider, Reze vs Denji from Anime category.
-    </p>
-  </div>
-
-  {/* ANIMATED WAVE */}
-  <div className="absolute bottom-0 left-0 w-full h-20 overflow-hidden z-10">
-    <svg
-      className="w-[200%] h-full animate-wave"
-      viewBox="0 0 1440 320"
-      preserveAspectRatio="none"
-    >
-      <path
-        fill="#e5e7eb"
-        d="M0,192L30,176C60,160,120,128,180,106.7C240,85,300,75,360,86.7C420,96,480,128,540,122.7C600,117,660,75,720,53.3C780,32,840,32,900,53.3C960,75,1020,117,1080,122.7C1140,128,1200,96,1260,85.3C1320,75,1380,85,1410,90.7L1440,96V320H0Z"
-      ></path>
-    </svg>
-  </div>
-
-  {/* KEYFRAMES */}
-  <style>
-    {`
-      @keyframes waveMove {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-      }
-
-      .animate-wave {
-        animation: waveMove 6s linear infinite;
-      }
-    `}
-  </style>
-</div>
+        <div className="flex flex-wrap gap-4">
+          {["4K ready", "Dual monitor", "Phone crops", "AI upscaled"].map((label) => (
+            <span
+              key={label}
+              className="rounded-full border border-gray-300/50 dark:border-white/10 bg-gray-100/50 dark:bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-gray-700 dark:text-white/80"
+            >
+              {label}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 

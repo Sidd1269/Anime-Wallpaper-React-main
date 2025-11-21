@@ -1,7 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
-import Section1 from "./Components/Section1/Section1";
 import Section2 from "./Components/Section2/Section2";
 import WallpaperPage from "./Components/Pages/WallpaperPage";
 import CategoryPage from "./Components/Pages/CategoryPage"; 
@@ -29,15 +28,7 @@ function App() {
       <Routes>
 
         {/* HOME PAGE */}
-        <Route
-          path="/"
-          element={
-            <>
-              <Section1 />
-              <Section2 />
-            </>
-          }
-        />
+        <Route path="/" element={<Section2 />} />
 
         {/* DYNAMIC WALLPAPER PAGE */}
         <Route path="/wallpaper/:id" element={<WallpaperPage />} />

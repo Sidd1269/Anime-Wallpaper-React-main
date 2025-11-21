@@ -1,34 +1,38 @@
-import { ArrowUpRight } from 'lucide-react'; 
-
+import { ArrowUpRight, Sparkles } from "lucide-react";
 
 const HeroText = () => {
   return (
-    <div className='h-full flex flex-col w-full md:w-1/2 lg:w-1/3  p-6 md:p-10 justify-between'>
-
-      {/* TEXT CONTENT */}
-      <div className='pl-6'>
-        <h3 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight'>
-          Collection <br /> 
-          <span className=' text-gray-500 rounded-3xl px-1 py-1 mt-2'>Of 4k</span> <br />
-          Wallpapers
-        </h3>
-
-        <p className='text-base sm:text-lg md:text-xl text-gray-700'>
-          Explore recently added wallpapers of Monkey D. Luffy,  Tojima Wants to Be a Kamen Rider, Reze vs Denji from Anime category.
+    <div className="flex w-full flex-col gap-10 rounded-[32px] border border-white/10 bg-slate-900/40 p-8 shadow-glow backdrop-blur">
+      <div className="space-y-4">
+        <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.4em] text-neon-cyan/80">
+          <Sparkles size={14} />
+          curated anime vault
+        </p>
+        <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+          Neo-Tokyo{" "}
+          <span className="bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan bg-clip-text text-transparent">
+            light trails
+          </span>{" "}
+          in native 4K.
+        </h1>
+        <p className="text-base text-slate-300 sm:text-lg">
+          Dive into cinematic frames of Luffy, Denji, Tanjiro, Gojo, and more—
+          remastered with deep blacks, anime gradients, and stylized grain that
+          make OLED screens glow.
         </p>
       </div>
 
-      {/* ICON */}
-      <div className='mt-20 md:mt-30'>
-        <ArrowUpRight 
-          size={50} 
-          className='sm:size-[60px] md:size-[70px] lg:size-[90px]' 
-          strokeWidth={2} 
-        />
+      <div className="flex flex-wrap items-center gap-4">
+        <button className="rounded-2xl bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-glow transition hover:-translate-y-0.5">
+          Download Collection
+        </button>
+        <button className="group flex items-center gap-2 rounded-2xl border border-white/20 px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:border-neon-cyan/70">
+          Live preview
+          <ArrowUpRight className="transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+        </button>
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default HeroText
+export default HeroText;

@@ -1,65 +1,101 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import { ArrowLeft, Download, ExternalLink } from "lucide-react";
+import Navigation from "../Section1/Navigation";
 import wallpapers from "../../Data/Wallpaper.json";
+import Footer from "../Section3/Footer";
 
 const WallpaperPage = () => {
-  
-
   const { id } = useParams();
   const item = wallpapers.find(w => w.id == id);
 
-  if (!item) return <h1 className="text-center text-3xl mt-20">Wallpaper Not Found</h1>
+  if (!item) {
+    return (
+      <div className="relative min-h-screen w-full overflow-hidden bg-gradient-to-b from-slate-100 via-slate-50 to-slate-200 dark:from-night dark:via-night-2 dark:to-black">
+        <Navigation />
+        <div className="flex min-h-screen items-center justify-center">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Wallpaper Not Found</h1>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="min-h-screen w-full bg-[#1e1e24] text-white px-5 py-10">
-
-      {/* Title */}
-      <h1 className="text-3xl font-bold">
-        {item.title}
-      </h1>
-      <p className="text-gray-300 mt-2 max-w-2xl">
-        {item.desc}
-      </p>
-
-      {/* Image preview */}
-      <div className="flex justify-center mt-10">
-        <img 
-          src={item.image} 
-          alt={item.title}
-          className="rounded-xl shadow-2xl w-full max-w-4xl"
-        />
-      </div>
-
-      {/* Download buttons */}
-      <div className="flex gap-5 justify-center mt-10">
-        <a
-          href={item.image}
-          download
-          className="px-5 py-3 bg-green-600 rounded-lg hover:bg-green-700"
-        >
-          Download in HD
-        </a>
-
-        <a
-          href={item.image}
-          className="px-5 py-3 bg-blue-600 rounded-lg hover:bg-blue-700"
-          target="_blank"
-        >
-          Open Original
-        </a>
-      </div>
-
-      {/* Tags */}
-      <div className="flex gap-3 mt-10 flex-wrap text-gray-300">
-        {item.tags?.map((tag, i) => (
-          <span 
-            key={i}
-            className="px-3 py-1 bg-gray-800 rounded-lg text-sm"
+    <div className="relative min-h-screen w-full overflow-hidden bg-gradient-to-b from-slate-100 via-slate-50 to-slate-200 dark:from-night dark:via-night-2 dark:to-black">
+      <div className="absolute inset-0 bg-anime-grid-light dark:bg-anime-grid opacity-20 dark:opacity-40" aria-hidden />
+      
+      <div className="relative z-10">
+        <Navigation />
+        
+        <div className="mx-auto max-w-5xl px-6 py-12">
+          <Link 
+            to="/"
+            className="mb-8 inline-flex items-center gap-2 rounded-xl border border-gray-300/50 dark:border-white/10 bg-gray-100/50 dark:bg-white/5 px-4 py-2 text-sm font-semibold text-gray-800 dark:text-white transition hover:border-gray-400/60 dark:hover:border-neon-cyan/60 hover:bg-gray-200/50 dark:hover:bg-white/10"
           >
-            {tag}
-          </span>
-        ))}
-      </div>
+            <ArrowLeft size={16} />
+            Back to Home
+          </Link>
 
+          {/* Title and Description */}
+          <div className="mb-8">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl mb-4">
+              {item.title}
+            </h1>
+            <p className="text-gray-700 dark:text-gray-300 text-lg max-w-3xl leading-relaxed">
+              {item.desc}
+            </p>
+          </div>
+
+          {/* Image preview */}
+          <div className="mb-10 rounded-2xl overflow-hidden border border-gray-300/50 dark:border-white/10 bg-gray-100/50 dark:bg-white/5 p-4 backdrop-blur-sm">
+            <img 
+              src={item.image} 
+              alt={item.title}
+              className="w-full rounded-xl shadow-2xl"
+            />
+          </div>
+
+          {/* Download buttons */}
+          <div className="mb-10 flex flex-wrap gap-4 justify-center">
+            <a
+              href={item.image}
+              download
+              className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-neon-pink/80 to-neon-purple/80 px-6 py-3 font-semibold text-white transition hover:scale-105 hover:shadow-glow"
+            >
+              <Download size={18} />
+              Download in HD
+            </a>
+
+            <a
+              href={item.image}
+              className="flex items-center gap-2 rounded-xl border border-gray-400/50 dark:border-neon-cyan/50 bg-gray-100/50 dark:bg-white/5 px-6 py-3 font-semibold text-gray-800 dark:text-white transition hover:border-gray-500/60 dark:hover:border-neon-cyan/80 hover:bg-gray-200/50 dark:hover:bg-white/10"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ExternalLink size={18} />
+              Open Original
+            </a>
+          </div>
+
+          {/* Tags */}
+          {item.tags && item.tags.length > 0 && (
+            <div className="mb-10">
+              <h3 className="mb-4 text-lg font-semibold text-gray-700 dark:text-white/80">Tags</h3>
+              <div className="flex flex-wrap gap-3">
+                {item.tags.map((tag, i) => (
+                  <span 
+                    key={i}
+                    className="rounded-lg border border-gray-300/50 dark:border-white/10 bg-gray-100/50 dark:bg-white/5 px-4 py-2 text-sm text-gray-700 dark:text-white/80 backdrop-blur-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+        
+        <Footer />
+      </div>
     </div>
   );
 };
