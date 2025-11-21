@@ -7,7 +7,11 @@ const Header = () => {
   const categories = [...new Set(wallpapers.map(w => w.category))];
 
   return (
-    <div className="max-w-7xl mx-auto text-white uppercase px-10 py-10">
+    <div className=" py-8 sm:py-12">
+      <div className="max-w-7xl mx-auto px-4">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center text-white mb-8">
+          Browse by Category
+        </h2>
 
       <div className="flex flex-wrap gap-4 justify-center">
 
@@ -23,6 +27,7 @@ const Header = () => {
 
       </div>
 
+    </div>
     </div>
   );
 };

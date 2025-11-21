@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import wallpapers from "../../Data/Wallpaper.json";
 import WallpaperCard from "./WallpaperCard";
 
 const WallpaperList = ({ category }) => {
   const [page, setPage] = useState(1);
   const pageSize = 20;
+  const wallpaperGridRef = useRef(null);
 
   const normalize = (str) => str.toLowerCase().replace(/\s+/g, "-");
 
@@ -19,13 +20,15 @@ const WallpaperList = ({ category }) => {
   const start = (page - 1) * pageSize;
   const paginatedWallpapers = filtered.slice(start, start + pageSize);
 
-  // Scroll to top on page change
+  // Scroll to wallpaper grid on page change
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (wallpaperGridRef.current) {
+      wallpaperGridRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   }, [page]);
 
   return (
-    <div className="w-full">
+    <div className="w-full" ref={wallpaperGridRef}>
 
       {/* Wallpaper GRID */}
       <div className="w-full flex flex-wrap gap-6 justify-center mt-10">
